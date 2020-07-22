@@ -54,9 +54,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Home</a>
+          <a class="nav-item nav-link" href="">Home</a>
           <a class="nav-item nav-link" href="#">C.V.</a>
-          <a class="nav-item nav-link active" href="#">Blog</a>
+          <a class="nav-item nav-link active" href="/blog/">Blog</a>
         </div>
       </div>
     </nav>
@@ -73,11 +73,11 @@
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
         <a href=''><h3>{{blog.title}}</h3></a>
-        {{blog.myDate}}
+        {{ blog.myTimeStamp }}
         <br />
         <img class="card-img-top img-fluid" src="{{blog.mySnapshot.url}}" height=200 width=200/>
         <div class="card-body">
-          <p class="card-text">{{ blog.myPost }}</p>
+          <p class="card-text">{{ blog.mySummary }}</p>
         </div>
       </div>
     </div>

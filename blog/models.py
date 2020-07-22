@@ -7,3 +7,13 @@ class Blog(models.Model):
     myDate = models.DateTimeField()
     myPost = models.TextField(max_length = 300)
     mySnapshot = models.ImageField(upload_to = 'images/')
+
+    def __str__(self):
+        return self.title
+
+    def mySummary(self):
+        return self.myPost[:80]
+
+
+    def myTimeStamp(self):
+        return self.myDate.strftime('%b %e %Y')

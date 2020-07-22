@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -47,15 +48,15 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Brógán McShane</a>
+      <a class="navbar-brand" href="{% urls 'home'%}">Brógán McShane</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#">C.V.</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="/home.html">Home</a>
+          <a class="nav-item nav-link" href="{% static 'myCV_website.pdf' %}">C.V.</a>
+          <a class="nav-item nav-link" href="/blog/">Blog</a>
         </div>
       </div>
     </nav>
@@ -71,6 +72,7 @@
           <a href="mailto:brogan123@protonmail.com" class="btn btn-primary my-2">Email</a>
         </p>
         <p class="lead text-muted">Brogan123@protonmail.com</p>
+        <img src='{% static 'me.jpeg' %}'/>
       </div>
     </section>
     <div class="album py-5 bg-light">
